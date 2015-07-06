@@ -1,0 +1,119 @@
+/* Session Style by Anass Ahmed */
+* { margin: 0; padding: 0; }
+
+body {
+	font: 11px "Lucida Grande", Verdana, Arial, "Bitstream Vera Sans", sans-serif;
+	background-color: #fafafa;
+}
+
+form {
+	margin-left: 8px;
+	padding: 16px 16px 40px 16px;
+	font-weight: normal;
+	-moz-border-radius: 11px;
+	-khtml-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 5px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+	-moz-box-shadow: rgba(200,200,200,1) 0 4px 18px;
+	-webkit-box-shadow: rgba(200,200,200,1) 0 4px 18px;
+	-khtml-box-shadow: rgba(200,200,200,1) 0 4px 18px;
+	box-shadow: rgba(200,200,200,1) 0 4px 18px;
+}
+
+h1 {
+    margin: 10px;
+    font-size: 4em;
+    text-align: center;
+    -moz-text-shadow: 0 3px 10px #707070;
+    -web-text-shadow: 0 3px 10px #707070;
+    text-shadow: 0 3px 10px #707070;
+}
+
+h1:hover {
+    color: #222;
+}
+
+#login { width: 320px; margin: 7em auto; }
+
+label {
+	color: #777;
+	font-size: 13px;
+}
+
+.msg {
+	margin: 0 0 16px 8px;
+	border-width: 1px;
+	border-style: solid;
+	padding: 12px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	background-color:#ffebe8;
+	border-color:#c00;
+}
+
+.msg a{color:#c00;}
+
+input {
+	color: #555;
+}
+
+input[type=text],
+input[type=password] {
+    font-size: 24px;
+	width: 97%;
+	padding: 3px;
+	margin-top: 2px;
+	margin-right: 6px;
+	margin-bottom: 16px;
+	border: 1px solid #e5e5e5;
+	background: #fbfbfb;
+}
+
+button, input[type=button], 
+input[type=submit], 
+input[type=reset] {
+    border: 1px solid #888;
+    color: #333;
+    background: #f2f2f2 url("images/btn_gradiant.png") repeat-x;
+    margin: 0 5px;
+    float: right;
+}
+
+button, 
+input[type=button], 
+input[type=submit], 
+input[type=reset] {
+    padding: 5px 15px;
+    font-size: 95%;
+    -webkit-border-radius:30px;
+    -moz-border-radius:30px;
+    border-radius:30px;
+}
+
+button:hover, 
+button:active, 
+input[type=button]:hover, 
+input[type=button]:active,
+input[type=submit]:hover, 
+input[type=submit]:active, 
+input[type=reset]:hover, 
+input[type=reset]:active {
+    border: 1px solid #000;
+    color: #000;
+}
+
+button:active,
+input[type=button]:active,
+input[type=submit]:active,
+input[type=reset]:active {
+    background: #f2f2f2 url("images/btn_gradiant2.png") repeat-x;
+    color: #c00;
+}
+
+input[type=checkbox] {
+    float: left;
+}

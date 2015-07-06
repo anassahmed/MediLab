@@ -1,0 +1,24 @@
+#TODO:
+
+1. Finish Reports Pages                                                                 #DONE
+2. Add Note for Bills, Templates, Reports                                               #DONE
+3. Add "Total After Discount" in Bill Information                                       #DONE
+4. Change path from "?" to "/"                                                          #DONE
+5. Finish Security Bugs
+6. Add Links to "Bill" and "Customer" in Bills Information and Report Information       #DONE
+7. Change Time Format in Bills and Reports                                              #DONE
+8. Add Time Search in Bills and Reports                                                 #DONE
+9. Delete Customer -> Delete His Bills -> Delete His Reports                            #DONE
+10. Delete Bill -> Delete Her Reports                                                   #DONE
+11. Change Forms Style and Add Print Style                                              #DONE
+12. Filter and Escape " ' " (single quotes) and Lines from notes and contents           #DONE
+13. Filter and Escape ' " ' from all escape functions
+14. Add "viewBillsReportsList()" function to show the bill reports                      #DONE
+15. Change the redirctException() in add and edit process to HTML tags or JS functions  #DONE
+16. Add Error Exception for AJAX                                                        #DONE
+17. Add Lab Info and Printing System                                                    #DONE
+18. Add Login Attempts for login 
+19. Change Login and Install pages style.                    
+20. Enable Printing Settings in View Reports Page.
+21. Edit Login to Increase login Hours when the page reloaded.                           
+22. !Important! Separate Templates from the Main DB and rebuild it.                     

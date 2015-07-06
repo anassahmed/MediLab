@@ -1,0 +1,97 @@
+<!DOCTYPE HTML> <!-- TODO: DOCTYPE XHTML -->
+<html>
+<head>
+    <title>MediLab Organizer</title>
+    <meta http-Equiv="Content-Type" content="text/html; charset:UTF-8" />
+    <meta name="description" content="Medilab Orginaizer is web app for Organize Medical Reports for Medical Labs." />
+    <meta name="keywords" content="MediLab, Labs, Medical, Reports, Bills" />
+    <link rel="stylesheet" href="%(script)s/files/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="%(script)s/files/print.css" type="text/css" media="print" />
+    <script src="%(script)s/files/jquery-1.4.3.min.js" type="text/javascript"></script>
+    <script src="%(script)s/files/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+    <script type="text/javascript" src="%(script)s/files/nicEdit.js"></script>
+    <!-- <script type="text/javascript" src="%(script)s/files/ckeditor/ckeditor.js"></script> -->
+
+</head>
+<body>
+
+<div id="header" class="no-print">
+<div id="innerWrap">
+    <a href="%(script)s/"><img src="%(script)s/files/images/Logo.png" alt="MediLab" /></a>
+    <ul id="nav">
+    <li><a href="%(script)s/">Home</a></li>
+    <li><a href="%(script)s/page/customers">Customers</a></li>
+    <li><a href="%(script)s/page/templates">Templates</a></li>
+    <li><a href="%(script)s/page/bills">Bills</a></li>
+    <li><a href="%(script)s/page/reports">Reports</a></li>
+    <li><a href="%(script)s/page/members">Members</a></li>
+    <li><a href="%(script)s/page/settings">Settings</a></li>
+    <li><a href="%(script)s/session/?do=logout">Logout</a></li>
+    </ul>
+</div><!-- innerWrap -->
+</div><!-- header -->
+<div id="contentBorder">
+<div id="content">
+</div><!-- content -->
+</div><!-- contentBorder -->
+
+<!-- ################################################################################# -->
+<!-- Don't Remove My CopyRights :( -->
+<!-- ################################################################################# -->
+
+<div id="footer" class="no-print">
+<div id="innerWrap">
+    Powered by MediLab Organizer - Cobyright &copy; 2011 MediaLab Organizer. All Rights Reserved. for <a href="http://anassahmed.tk">Anass Ahmed</a>.
+</div><!-- innerWrap -->
+</div><!-- footer -->
+
+<div id="error404" class="error" style="display:none;">
+<h1>Error 404: File Not Found</h1>
+    <p>This Error Happened when you visited <strong><span id="url"></span></strong>, this page Maybe:
+    <ul>
+    <li>Deleted.</li>
+    <li>Moved.</li>
+    <li>Wasn't Created.</li>
+    </ul>
+    </p>
+</div>
+
+<div id="error403" class="error" style="display:none;">
+<h1>Error 403: Forbidden</h1>
+<p>Maybe, You've not enough privileges to open this page: <strong><span id="url"></span></strong>.</p>
+</div>
+
+<div id="error500" class="error" style="display:none;">
+<h1>Error 500: Internal Server Error</h1>
+<p>this Error Happened because:
+    <ul>
+    <li>Database Error.</li>
+    <li>Invalid Entry.</li>
+    <li>Some Files is missing.</li>
+    </ul>
+but the second reason is usually the cause of this Error.</p>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#content").ajaxError(function(e, xhr, settings) {
+            if (xhr.status == 404) {
+                $("#error404 #url").html(settings.url);
+                $("#content").html("<div class='error'>"+document.getElementById("error404").innerHTML+"</div>").show();
+            };
+            if (xhr.status == 403) {
+                $("#error403 #url").html(settings.url);
+                $("#content").html("<div class='error'>"+document.getElementById("error403").innerHTML+"</div>").show();
+            };
+            if (xhr.status == 500) {
+                $("#content").html("<div class='error'>"+document.getElementById("error500").innerHTML+"</div>").show();
+            };
+            if (xhr.status != 404 && xhr.status != 403 && xhr.status != 500) {
+                alert("An Error Occured: "+xhr.status+", Please send this bug to the programmer");
+            };
+        });
+        %(contentScript)s
+    });
+</script>
+</body>
+</html>

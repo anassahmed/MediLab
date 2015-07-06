@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="%(script)s/files/style.css" type="text/css" />
+<script src="%(script)s/files/jquery-1.4.3.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="%(script)s/files/nivo-slider.css" type="text/css" media="screen" />
+<script type="text/javascript" src="%(script)s/files/jquery.nivo.slider.pack.js"></script>
+<div id="slider-wrapper" style="display:none;">
+<div id="slider">
+    <a href="%(script)s/page/bills/"><img src="%(script)s/files/bills.jpg" alt="Bills" title="#billsCaption" />
+    <a href="%(script)s/page/customers/"><img src="%(script)s/files/Customers.jpg" alt="Customers" title="#customersCaption" /></a>
+    <a href="%(script)s/page/templates/"><img src="%(script)s/files/Reports.jpg" alt="Templates" title="#templatesCaption" /></a>
+</div>
+<div id="billsCaption" class="nivo-html-caption">
+    <h3>Bills</h3>
+    <p>Control the Bills. Add, Edit, Delete Reports for your Customers.</p>
+</div>
+<div id="customersCaption" class="nivo-html-caption">
+    <h3>Customers</h3>
+    <p>Control the Customers of your Lab. Add, Edit, Delete and Search about them.</p>
+</div>
+<div id="templatesCaption" class="nivo-html-caption">
+    <h3>Templates</h3>
+    <p>Control the Templates. Add, Edit and Delete Prepared Templates to use them in your future Reports.</p>
+</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#slider-wrapper').show("fast");
+    $('#slider').nivoSlider();
+});
+</script>
+<div id="columns">
+<div id="col1">
+<h2><img src="%(script)s/files/home.png" alt="" height="25" /> Welcome</h2>
+<p>Welcome to MediLab Orginaizer. Start Adding Customers, Templates and use them in your Reports.</p>
+</div>
+<div id="col2">
+<h2><img src="%(script)s/files/statistics.png" alt="" height="25" /> Statistics</h2>
+<ul>
+<li>Customers: <span id="customers"></span></li>
+<li>Bills: <span id="bills"></span></li>
+<li>Reports: <span id="reports"></span></li>
+</ul>
+</div>
+</div>
+<h2>Latest Customers</h2>
+<table id="latestCustomers" border="1" cellspacing="0" cellpadding="0" class="bordered">
+</table>
+<h2>Latest Bills</h2>
+<table id="latestBills" border="1" cellspacing="0" cellpadding="0" class="bordered">
+</table>
+<script type="text/javascript">
+$(document).ready(function() {
+    %(mainScript)s
+});
+</script>

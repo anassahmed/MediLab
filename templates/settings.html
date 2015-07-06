@@ -1,0 +1,238 @@
+
+<!-- Lab Info and Printing System -->
+
+<script src="%(script)s/files/jquery-1.4.3.min.js" type="text/javascript"></script>
+<script src="%(script)s/files/tiny_mce/tiny_mce.js" type="text/javascript"></script>
+<script type="text/javascript" src="%(script)s/files/nicEdit.js"></script>
+<!-- <script type="text/javascript" src="%(script)s/files/ckeditor/ckeditor.js"></script> -->
+
+<!-- ################################################################################# -->
+<!-- Main Page -->
+<!-- ################################################################################# -->
+
+<div id="mainPage" style="display:none;">
+<h1>MediLab Settings</h1>
+<div id="labInfo">
+<h2 style="margin-bottom: 0;">Lab Information</h2>
+<a href="%(script)s/page/settings/?view=edit&name=labinfo" class="non-borders"><button style="float:right;margin:3px;">Edit Lab Information</button></a>
+<table border="1" cellspacing="0" cellpadding="0" class="bordered">
+    <tr>
+    <td class="labels">
+    <span>Lab Name:</span>
+    </td>
+    <td>
+    <span id="view_lab_name"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Lab Address:</span>
+    </td>
+    <td>
+    <span id="view_lab_address"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Lab Phone:</span>
+    </td>
+    <td>
+    <span id="view_lab_phone">
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Lab E-mail:</span>
+    </td>
+    <td>
+    <span id="view_lab_email"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Lab Website:</span>
+    </td>
+    <td>
+    <span id="view_lab_website"></span>
+    </td>
+    </tr>
+</table>
+</div><!-- labInfo -->
+<div id="printSettings">
+<h2 style="margin-bottom: 0;">Printing Settings</h2>
+<a href="%(script)s/page/settings/?view=edit&name=printing" class="non-borders"><button style="float:right;margin:3px;">Edit Printing Settings</button></a>
+<table border="1" cellspacing="0" cellpadding="0" class="bordered">
+    <tr>
+    <td class="labels">
+    <span>Top Margin:</span>
+    </td>
+    <td>
+    <span id="view_print_top_margin"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Bottom Margin:</span>
+    </td>
+    <td>
+    <span id="view_print_bottom_margin"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Right Margin:</span>
+    </td>
+    <td>
+    <span id="view_print_right_margin"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Left Margin:</span>
+    </td>
+    <td>
+    <span id="view_print_left_margin"></span>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <span>Print Report Details:</span>
+    </td>
+    <td>
+    <span id="view_print_report_details"></span>
+    </td>
+    </tr>
+</table>
+</div><!-- printSettings -->
+</div><!-- mainPage -->
+
+<!-- ################################################################################# -->
+<!-- Edit Lab Information -->
+<!-- ################################################################################# -->
+
+<div id="editLabInfo" style="display:none;">
+<a href="%(script)s/page/settings/" class="non-borders"><button style="float:right;">Return to Settings Page</button></a>
+<h1>Edit Lab Inforamtion</h1>
+<form id="editLabInfoForm" name="editLabInfoForm">
+<table>
+    <tr>
+    <td class="labels">
+    <label for="lab_name">Lab Name:</label>
+    </td>
+    <td>
+    <input type="text" id="lab_name" name="lab_name" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="lab_address">Lab Address:</label>
+    </td>
+    <td>
+    <textarea id="lab_address" name="lab_address"></textarea>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="lab_phone">Lab Phone:</label>
+    </td>
+    <td>
+    <input type="text" id="lab_phone" name="lab_phone" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="lab_email">Lab E-Mail:</label>
+    </td>
+    <td>
+    <input type="text" id="lab_email" name="lab_email" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="lab_website">Lab Website:</label>
+    </td>
+    <td>
+    <input type="text" id="lab_website" name="lab_website" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    </td>
+    <td>
+    <input type="reset" id="resetForm" name="resetForm" value="Clear" />
+    <input type="button" id="submit" name="submit" value="Edit Lab Information" />
+    </td>
+    </tr>
+</table>
+</form>
+</div><!-- editLabInfo -->
+
+<!-- ################################################################################# -->
+<!-- Edit Printing Settings -->
+<!-- ################################################################################# -->
+
+<div id="editPrintSettings" style="display:none;">
+<a href="%(script)s/page/settings/" class="non-borders"><button style="float:right;">Return to Settings Page</button></a>
+<h1>Printing Settings</h1>
+<form id="editPrintSettings" name="editPrintSettings">
+<table>
+    <tr>
+    <td class="labels">
+    <label for="print_top_margin">Top Margin:</label>
+    </td>
+    <td>
+    <input type="text" id="print_top_margin" name="print_top_margin" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="print_bottom_margin">Bottom Margin:</label>
+    </td>
+    <td>
+    <input type="text" id="print_bottom_margin" name="print_bottom_margin" />
+    </tr>
+    <tr>
+    <td>
+    <label for="print_right_margin">Right Margin:</label>
+    </td>
+    <td>
+    <input type="text" id="print_right_margin" name="print_right_margin" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    <label for="print_left_margin">Left Margin:</label>
+    </td>
+    <td>
+    <input type="text" id="print_left_margin" name="print_left_margin" />
+    </td>
+    </tr>
+    <tr>
+    <td>
+    </td>
+    <td>
+    <input type="checkbox" id="print_report_details" name="print_report_details" value="1" />
+    <label for="print_report_details">Print Report Details?</label>
+    </td>
+    </tr>
+    <tr>
+    <td>
+    </td>
+    <td>
+    <input type="reset" id="resetForm" name="resetForm" value="Clear" />
+    <input type="button" id="submit" name="submit" value="Edit Printing Settings" />
+    </td>
+    </tr>
+</table>
+</form>
+</div><!-- editPrintSettings -->
+
+<!-- ################################################################################# -->
+<!-- Script Area -->
+<!-- ################################################################################# -->
+
+<script type="text/javascript">
+$(document).ready(function() {
+    %(settingsScript)s
+});
+</script>

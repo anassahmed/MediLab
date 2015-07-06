@@ -1,0 +1,73 @@
+/* For Printing */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+* {padding: 0; margin: 0}
+
+body {
+    page-break-inside: always;
+    margin-top: 5px;
+}
+
+.no-print {
+    display: none;
+}
+
+.viewContent {
+    border: 0;
+    background: #fff;
+    color: #000;
+    page-break-inside: always;
+    page-break-after: always;
+}
+
+.viewContent h1, 
+.viewContent h2, 
+.viewContent h3, 
+.viewContent h4, 
+.viewContent h5, 
+.viewContent h6 {
+    text-shadow: 0 0 0 #707070; /* Removing shadows */
+    border-bottom: 0; /* Removing Bottom Border */
+    color: #000;
+}
+
+.viewContent p, 
+.viewContent span, 
+.viewContent div, 
+.viewContent table, 
+.viewContent tr, 
+.viewContent td {
+    color: #000;
+    font-size: 100%;
+    border: 0;
+    background: #fff;
+}
+
+@page {
+    padding: 10cm;
+    margin: 10cm;
+}
+
+#contentBorder {
+    border: 0;
+    background: transparent;
+}
+
+#content {
+    border: 0;
+}
